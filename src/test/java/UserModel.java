@@ -1,7 +1,40 @@
 import groovyjarjarantlr4.v4.codegen.model.SrcOp;
 
 public class UserModel {
-    private String email, password,phone_number, nid, role, name;
+    private String email;
+    private String password;
+    private String phone_number;
+    private String nid;
+
+    public String getFormAccount() {
+        return formAccount;
+    }
+
+    public void setFormAccount(String formAccount) {
+        this.formAccount = formAccount;
+    }
+
+    public String getToAccount() {
+        return toAccount;
+    }
+
+    public void setToAccount(String toAccount) {
+        this.toAccount = toAccount;
+    }
+
+    public String getAmount() {
+        return amount;
+    }
+
+    public void setAmount(String account) {
+        this.amount = account;
+    }
+
+    private String role;
+    private String name;
+    private String formAccount;
+    private String toAccount;
+    private String amount;
 
     public String getPhone_number() {
         return phone_number;
@@ -63,6 +96,12 @@ public class UserModel {
         this.phone_number=phone_number;
         this.nid=nid;
         this.role=role;
+    }
+
+    public UserModel(String from_account, String to_account, String amount) {
+        this.formAccount = from_account;
+        this.toAccount = to_account;
+        this.amount = amount;
     }
     public UserModel (){
 
